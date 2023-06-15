@@ -1,0 +1,8 @@
+.finder {
+    width: 75%;
+    height: 12rem;
+    position: relative;
+    left: 12.5%;
+    top: 2rem;
+    box-shadow: 0px 0px 22px 4px rgba(255, 32, 32, 0.25);
+}
