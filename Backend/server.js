@@ -5,12 +5,14 @@ const bodyParser = require('body-parser')
 const ejs = require('ejs')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+const cors = require('cors')
 
 const app = express()
 
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.static('./public'))
 app.set('view engine', 'ejs');
+app.use(cors())
 
 const User = mongoose.model('User', {
     name: String,

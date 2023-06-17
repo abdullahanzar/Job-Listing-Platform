@@ -1,8 +1,35 @@
 .finder {
-    width: 75%;
-    height: 12rem;
-    position: relative;
-    left: 12.5%;
-    top: 2rem;
-    box-shadow: 0px 0px 22px 4px rgba(255, 32, 32, 0.25);
+  width: 75%;
+  height: 12rem;
+  position: relative;
+  left: 12.5%;
+  top: 2rem;
+  box-shadow: 0px 0px 22px 4px rgba(255, 32, 32, 0.25);
+}
+
+.finder input:first-of-type {
+  background: #ffffff;
+  border: 1.8px solid #e3e3e3;
+  border-radius: 9px;
+  height: 3rem;
+  width: 75%;
+  position: relative;
+  left: 10%;
+  top: 10%;
+  padding: 0.5rem;
+  text-indent: 3rem;
+  font-size: 1.2rem;
+  font-family: DM Sans, sans-serif;
+}
+
+.finder input:first-of-type::placeholder {
+  position: relative;
+  left: 1%;
+}
+
+
+.finder img:first-of-type {
+  position: relative;
+  right: 65%;
+  top: 15%;
 }
