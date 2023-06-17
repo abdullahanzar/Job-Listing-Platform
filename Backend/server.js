@@ -113,7 +113,7 @@ app.post('/login', async (req, res)=>{
     const authentication = await authenticate(email, password);
     if(authentication) {
         try {
-        const jwtToken = await jwt.sign({email, password}, process.env.JWT_SECRET_KEY, { expiresIn: 300})
+        const jwtToken = await jwt.sign({email, password}, process.env.JWT_SECRET_KEY, { expiresIn: 1800})
         res.json({
             authentication: true,
             login: "successful",
