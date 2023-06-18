@@ -138,13 +138,14 @@ app.post('/login', async (req, res)=>{
 })
 
 app.post('/job', isAuthenticated, async (req, res)=>{
-    const {companyName, logoURL, jobPosition, monthlySalary,
+    let {companyName, logoURL, jobPosition, monthlySalary,
         jobType, remoteOffice, location, jobDescrip, aboutCompany, skillsRequired} = req.body;
     if(!companyName || !logoURL || !jobPosition || !monthlySalary || 
         !jobType || !remoteOffice || !location || !jobDescrip || !aboutCompany || !skillsRequired)
     res.json({error: "Body is incomplete."})
     else {
         try {
+            skillsRequired = skillsRequired.split(',')
             await Job.create({companyName, logoURL, jobPosition, monthlySalary,
                 jobType, remoteOffice, location, jobDescrip, aboutCompany, skillsRequired})
             res.json({Success: "All Good"})

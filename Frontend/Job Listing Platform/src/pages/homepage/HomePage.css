@@ -1,0 +1,11 @@
+.HP_select {
+  background: #ffffff;
+  border: 2px solid #cecece;
+  border-radius: 9px;
+  padding: 1rem;
+  position: relative;
+  left: 20%;
+  bottom: 3rem;
+  font-size: 1rem;
+  font-family: DM Sans, sans-serif;
+}
